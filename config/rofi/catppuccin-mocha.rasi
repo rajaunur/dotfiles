@@ -1,0 +1,117 @@
+* {
+    /* Catppuccin Mocha */
+    rosewater: #f5e0dc;
+    mauve:     #cba6f7;
+    red:       #f38ba8;
+    green:     #a6e3a1;
+    blue:      #89b4fa;
+    text:      #cdd6f4;
+    subtext0:  #a6adc8;
+    overlay0:  #6c7086;
+    surface1:  #45475a;
+    surface0:  #313244;
+    base:      #1e1e2e;
+    crust:     #11111b;
+
+    background-color: transparent;
+    text-color:       @text;
+    font:             "JetBrainsMono Nerd Font 13";
+}
+
+configuration {
+    modi:                "drun,run,window";
+    show-icons:          true;
+    icon-theme:          "Papirus";
+    drun-display-format: "{name}";
+    display-drun:        "Apps";
+    display-run:         "Run";
+    display-window:      "Window";
+}
+
+window {
+    width:            560px;
+    location:         center;
+    anchor:           center;
+    background-color: @crust;
+    border-radius:    10px;
+}
+
+mainbox {
+    padding:  16px;
+    spacing:  12px;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    padding:          12px 16px;
+    spacing:          10px;
+    background-color: @surface0;
+    border-radius:    8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @mauve;
+}
+
+entry {
+    placeholder:       "...";
+    placeholder-color: @overlay0;
+    cursor-color:      @mauve;
+}
+
+message {
+    padding:          12px 16px;
+    background-color: @surface0;
+    border-radius:    8px;
+}
+
+textbox {
+    text-color: @subtext0;
+}
+
+listview {
+    lines:       8;
+    columns:     1;
+    fixed-height: true;
+    scrollbar:   false;
+    spacing:     4px;
+}
+
+element {
+    padding:       10px 14px;
+    spacing:       15px;
+    border-radius: 8px;
+}
+
+element-icon {
+    size:           28px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element selected.normal {
+    background-color: @surface0;
+    text-color:       @mauve;
+}
+
+element normal.urgent, element alternate.urgent {
+    text-color: @red;
+}
+
+element normal.active, element alternate.active {
+    text-color: @green;
+}
+
+element selected.urgent {
+    background-color: @surface0;
+    text-color:       @red;
+}
+
+element selected.active {
+    background-color: @surface0;
+    text-color:       @green;
+}

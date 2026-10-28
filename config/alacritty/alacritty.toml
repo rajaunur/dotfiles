@@ -1,0 +1,30 @@
+general.import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[window]
+# opacity = 1
+padding.x = 15
+padding.y = 15
+
+decorations = "None"
+
+[font]
+size = 9.5
+
+[font.bold]
+family = "JetBrains Mono NL"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrains Mono NL"
+style = "BoldItalic"
+
+[font.italic]
+family = "JetBrains Mono NL"
+style = "MediumItalic"
+
+[font.normal]
+family = "JetBrains Mono NL"
+style = "Medium"
+
